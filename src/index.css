@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Akkurat";
+    src: url(/src/Fonts/Akkurat.ttf);
+  }
+  @font-face {
+    font-family: "NeueMachina";
+    src: url(/src/Fonts/NeueMachina-Regular.ttf);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "NeueMachina", Arial, sans-serif;
+  }
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #100f10;
+  color: azure;
+}
+
+h1 {
+  font-family: "Akkurat", Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: #100f10;
+}
+
+::-webkit-scrollbar-thumb {
+  overflow: hidden;
+  width: 100%;
+  background: #2d2d2d;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d2d2d;
+}
+
+.menu {
+  border-bottom: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.service{
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 5em;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.mapBg {
+  position: absolute;
+  background-color: #2d2d2d;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 90%;
+  border-radius: 30% 70% 70% 30% / 34% 34% 66% 66% ;
+}
+
+.map {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contactForm {
+  display: grid;
+  gap: 3em;
+}
+
+form {
+  width: 100%;
+  margin-top: 3em;
+}
+
+.input {
+  width: 95%;
+  max-width: 700px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.6em;
+  outline: none;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+}
+
+.input:focus {
+  border: 1px solid #afb3b5;
+}
+
+.input::placeholder {
+  text-transform: capitalize;
+}
+
+.contactMethod {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.method {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .contact-form {
+    max-width: 1100px;
+  }
+  .contactForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contactMethod {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
