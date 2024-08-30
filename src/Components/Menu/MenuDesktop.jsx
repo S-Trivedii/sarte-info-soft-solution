@@ -12,6 +12,8 @@ const MenuDesktop = () => {
     { id: 3, name: "Product", url: "/products" },
     { id: 4, name: "Contact-Us", url: "/contact-us" },
     { id: 5, name: "Knowledge", url: "/knowledge" },
+    { id: 6, name: "SignUp", url: "/create-user" },
+    { id: 7, name: "Login", url: "/login-user" },
   ];
 
   return (

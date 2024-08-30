@@ -5,6 +5,8 @@ import Blog from "../Components/Pages/BlogPage/Blog";
 import Contact from "../Components/Pages/ContactPage/Contact";
 import Products from "../Components/Pages/ProductPage/Products";
 import Knowledge from "../Components/Pages/KnowledgePage/Knowledge";
+import SignUp from "../Components/Pages/SignupPage/SignUp";
+import Login from "../Components/Pages/LoginPage/Login";
 
 const Routing = () => {
   return (
@@ -16,6 +18,8 @@ const Routing = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/knowledge" element={<Knowledge />} />
+        <Route path="/create-user" element={<SignUp />} />
+        <Route path="/login-user" element={<Login />} />
       </Routes>
     </>
   );
